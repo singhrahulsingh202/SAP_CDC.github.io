@@ -41,6 +41,11 @@
           },
         });
       }
+      gigya.socialize.addEventHandlers({
+        onLogin: function () {
+          document.getElementById("logout").hidden=false;
+        }
+      });
       gigya.accounts.getAccountInfo({
         callback: function (response) {
           if (response.errorCode == 0) {
